@@ -1,0 +1,489 @@
+#main{
+    width: 100%;
+    height: 100%;
+}
+
+/*开场*/
+#startTop,#startBottom{
+    width: 100%;
+    height: 50%;
+    background-color: #009ee0;
+    position: absolute;
+    z-index: 10;
+}
+#startTop{
+    top: 0;
+}
+#startBottom{
+    bottom: 0;
+}
+#start span{
+    width: 0px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 48%;
+    left: 0;
+    z-index: 10;
+}
+
+/*头部及导航*/
+#header{
+    width: 100%;
+    height: 80px;
+}
+#headerWrap{
+    width: 1100px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+#logo{
+    margin-top: 30px;
+}
+#musicBox{
+    background: url(../img/musicon.gif) no-repeat;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 47px;
+    left: 192px;
+    cursor: pointer;
+}
+#nav{
+    float: right;
+    margin-top: 50px;
+}
+#nav li{
+    float: left;
+    margin-left: 40px;
+    position: relative;
+}
+#nav li a{
+    color: #009ee0;
+}
+#nav li a .up{
+    color: #000;
+    position: absolute;
+    z-index: 8;
+    width: 0;
+    overflow: hidden;
+    -webkit-transition: 0.5s;
+}
+#nav li a:hover .up{
+    width: 100%;
+}
+#headerArrow{
+    background: url(../img/menuIndicator.png) no-repeat;
+    width: 21px;
+    height: 11px;
+    position: absolute;
+    bottom: -11px;
+    -webkit-transition: 0.5s left;
+    z-index: 8;
+}
+
+/*分屏*/
+#content{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+#content .screen{
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    position: absolute;
+    top: 0px;
+    left: 0; right: 0;
+    overflow: hidden;
+}
+.scrcontent{
+    width: 1100px;
+    height: 100%;
+    margin: 30px auto;
+    position: absolute;
+    top: 0px;
+    left: 0; right: 0;
+}
+#content2 h1,#content3 h1,#content4 h1,#content5 h1{
+    color: #009ee0;
+    font-size: 80px;
+    font-weight: bold;
+    letter-spacing: -5px;
+    line-height: 0.8;
+}
+#content2,#content3,#content4,#content5{
+    padding: 50px 0 0 50px;
+    position: relative;
+}
+
+/*第三屏*/
+#content3 ul{
+    margin-top: 100px;
+    position: relative;
+    z-index: 1;
+}
+#content3 li{
+    height: 133px;
+    float: left;
+    margin: 0 1px;
+    position: relative;
+    overflow: hidden;
+}
+#content .worksCover{
+    opacity: 0;
+    -webkit-transition: .5s opacity;
+}
+#content3 li:hover .worksCover{
+    width: 200px;
+    height: 113px;
+    display: block;
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(25,25,25,0.8);
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+}
+#content3 .worksCover i{
+    display: inline-block;
+    background: url(../img/zoomico.png) no-repeat;
+    width: 32px;
+    height: 34px;
+    margin: 10px auto;
+    cursor: pointer;
+    -webkit-transition: .5s;
+}
+#content3 .worksCover i:hover{
+    background-position: 0 -34px;
+}
+#content3 li img{
+    -webkit-transition: .5s;
+}
+#content3 li:hover img{
+    -webkit-transform: scale(1.5) rotate(20deg);
+}
+.robot{
+    width: 167px;
+    height: 191px;
+    position: absolute;
+    left: 446px;
+    top: 166px;
+}
+#pencel1{
+    width: 180px;
+    height: 79px;
+    background: url(../img/pencel1.png) no-repeat;
+    position: absolute;
+    left: 496px;
+    top: 0;
+    -webkit-transition: 1s;
+}
+#pencel2{
+    width: 268px;
+    height: 38px;
+    background: url(../img/pencel2.png) no-repeat;
+    position: absolute;
+    left: 302px;
+    top: 277px;
+    -webkit-transition: 1s;
+}
+#pencel3{
+    width: 441px;
+    height: 231px;
+    background: url(../img/pencel3.png) no-repeat;
+    position: absolute;
+    left: 645px;
+    top: 300px;
+    -webkit-transition: 1s;
+}
+
+
+/*第一屏*/
+
+#content1{
+    -webkit-transform-style: preserve-3d;
+    -webkit-perspective: 800px;
+    position: absolute;
+    -webkit-transition: 1s;
+}
+#content1 ul{
+    height: 100%;
+}
+#content1 li{
+    width: 1100px;
+    height: 100%;
+    position: absolute;
+    visibility: hidden;
+    font-size: 80px;
+    color: #333;
+    text-align: center;
+    line-height: 400px;
+}
+#content1Btn{
+    position: absolute;
+    left: 45%;
+    bottom: 40px;
+    -webkit-transition: 1s;
+}
+#content1Btn span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+    margin-right: 3px;
+    box-shadow: 1px 1px 1px #333;
+    cursor: pointer;
+}
+#content1Btn .btnActive{
+    background-color: rgba(255,255,255,1);
+}
+#content1 .homeLeftHide{
+    -webkit-animation: 1s homeLeftHide;
+    visibility: hidden;
+}
+#content1 .homeRightShow{
+    -webkit-animation: 1s homeRightShow;
+    visibility: visible;
+}
+#content1 .homeLeftShow{
+    -webkit-animation: 1s homeLeftShow;
+    visibility: visible;
+}
+#content1 .homeRightHide{
+    -webkit-animation: 1s homeRightHide;
+    visibility: hidden;
+}
+@keyframes homeLeftHide{
+    0%{
+        visibility: visible;
+        -webkit-transform: translateZ(0);
+    }
+    40%{
+        -webkit-transform: translate(-40%,0) scale(0.8) rotateY(20deg);
+    }
+    100%{
+        -webkit-transform: translateZ(-200px);
+    }
+}
+@keyframes homeRightShow{
+    0%{
+        -webkit-transform: translateZ(-200px);
+    }
+    40%{
+        -webkit-transform: translate(40%,0) scale(0.8) rotateY(-20deg);
+    }
+    100%{
+        -webkit-transform: translateZ(0);
+    }
+}
+@keyframes homeLeftShow {
+    0%{
+        -webkit-transform: translateZ(-200px);
+    }
+    40%{
+        -webkit-transform: translate(-40%,0) scale(0.8) rotateY(20deg);
+    }
+    100%{
+        -webkit-transform: translateZ(0);
+    }
+}
+@keyframes homeRightHide {
+    0%{
+        visibility: visible;
+        -webkit-transform: translateZ(0);
+    }
+    40%{
+        -webkit-transform: translate(40%,0) scale(0.8) rotateY(-20deg);
+    }
+    100%{
+        -webkit-transform: translateZ(-200px);
+    }
+}
+
+/*第二屏*/
+#content2 p,#content4 p{
+    font-size: 16px;
+    color: #fff;
+    margin-top: 50px;
+    max-width: 400px;
+    position: relative;
+    z-index: 1;
+}
+#content2 #logosCon{
+    position: absolute;
+    right: 30px;
+    top: 60px;
+    width: 480px;
+}
+#content2 #logosCon .logosBox{
+    float: left;
+    width: 120px;
+    height: 132px;
+    margin-bottom: 2px;
+    position: relative;
+    cursor: pointer;
+}
+#content2 #logosCon .logoBefore{
+    width: 100%;
+    height: 100%;
+    background: no-repeat center center;
+    position: absolute;
+    -webkit-transition: 1s;
+}
+#content2 #logosCon .logoAfter{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #009ee0;
+    text-align: center;
+    color: #fff;
+    line-height: 3;
+    -webkit-transform: rotateY(-180deg);
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: 1s;
+}
+
+#content2 #logosCon .logosBox:hover .logoBefore{
+    -webkit-transform: rotateY(-180deg);
+    -webkit-backface-visibility: hidden;
+}
+#content2 #logosCon .logosBox:hover .logoAfter{
+    -webkit-transform: rotateY(0deg);
+}
+#content2 #plane1{
+    width: 359px;
+    height: 283px;
+    background: url(../img/plane1.png) no-repeat;
+    position: absolute;
+    left: 296px;
+    top: -100px;
+    -webkit-transition: 1s;
+}
+#content2 #plane2{
+    width: 309px;
+    height: 249px;
+    background: url(../img/plane2.png) no-repeat;
+    position: absolute;
+    left: -96px;
+    top: 208px;
+    -webkit-transition: 1s;
+}
+#content2 #plane3{
+    width: 230px;
+    height: 182px;
+    background: url(../img/plane3.png) no-repeat;
+    position: absolute;
+    left: 314px;
+    top: 396px;
+    -webkit-transition: 1s;
+}
+
+
+/*第四屏*/
+
+#content4 .imgBox{
+    width: 260px;
+    height: 200px;
+    border: 4px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    -webkit-transition: 1s;
+}
+#content4 .imgBox img{
+    -webkit-transform: scale(1.5);
+    -webkit-transition: .5s;
+}
+#content4 .imgBox ul{
+    width: 260px;
+    height: 200px;
+    position: absolute;
+    top:0;
+    left:0;
+}
+#content4 .imgBox li{
+    float: left;
+    width: 130px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+}
+#content4 .imgBox div{
+    width: 130px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: .5s;
+}
+#content4 #imgBox1{
+    position: absolute;
+    right: 80px;
+    top: 60px;
+}
+#content4 #imgBox2{
+    position: absolute;
+    right: 220px;
+    top: 300px;
+}
+
+/*第五屏*/
+#content5{
+    overflow: hidden;
+    position: relative;
+}
+#content5 h1{
+    -webkit-transition: 1s;
+}
+#content5 p{
+    font-size: 16px;
+    color: #fff;
+    max-width: 400px;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    -webkit-transition: 1s;
+}
+#content5 div{
+    width: 100%;
+    height: 448px;
+    background: url(../img/team.png) 50px 75px no-repeat;
+}
+
+/*右侧导航栏*/
+#sideBtn{
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    width: 12px;
+    z-index: 8;
+}
+#sideBtn span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+#sideBtn .sideActive{
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
